@@ -33,7 +33,7 @@ export const Login = () => {
                         <div>
                             <img
                                 className="mx-auto h-45 w-auto rounded-full"
-                                src="./public/imgBases/logolilium.jpg"
+                                src="./imgBases/logolilium.jpg"
                                 alt="Your Company"
                             />
                             <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">Ingresa a tu cuenta</h2>
