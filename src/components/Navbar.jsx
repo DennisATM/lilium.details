@@ -59,7 +59,7 @@ export const Navbar = ()=> {
             <div className="flex">
               <div className="flex-shrink-0 flex items-center md:mr-30">
                 <Link to="/" className="xs:text-2xl md:text-3xl font-bold text-emerald-400 flex items-center ms-madi-regular">
-                  <img src="../../public/imgBases/logolilium.jpg" alt="" className="w-15 @max-sm:hidden h-15 rounded-full mr-10" /> <span className="hidden sm:block">Lilium.detalles</span>
+                  <img src="./imgBases/logolilium.jpg" alt="" className="w-15 @max-sm:hidden h-15 rounded-full mr-10" /> <span className="hidden sm:block">Lilium.detalles</span>
                 </Link>
               </div>
               <div className="hidden md:flex md:ml-20 md:space-x-8 ms-madi-regular font-bold ">
