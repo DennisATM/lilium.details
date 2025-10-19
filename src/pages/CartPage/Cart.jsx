@@ -257,7 +257,7 @@ export const Cart = () => {
               <div className="flex-1">
                 <div className="font-medium">{item.name || item.title || "Producto"}</div>
                 <div className="text-sm text-gray-600">
-                  Precio: ${Number(item.price || 0).toFixed(2)}
+                  Precio: ${Number(item.price || 0).toFixed(0)}
                 </div>
               </div>
             </div>
@@ -282,7 +282,7 @@ export const Cart = () => {
               </div>
 
               <div className="text-right">
-                <div className="font-medium">${subtotalFor(item).toFixed(2)}</div>
+                <div className="font-medium">${subtotalFor(item).toFixed(0)}</div>
                 <div className="text-sm text-gray-500">total</div>
               </div>
 
@@ -310,7 +310,7 @@ export const Cart = () => {
 
         <div className="text-right w-full md:w-auto">
           <div className="text-gray-600">Subtotal</div>
-          <div className="text-2xl font-semibold">${total.toFixed(2)}</div>
+          <div className="text-2xl font-semibold">${total.toFixed(0)}</div>
           <div className="mt-3 flex flex-col md:flex-row md:space-x-2 items-stretch md:items-center">
             <button
               onClick={() => navigate("/shopee")}
