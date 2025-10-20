@@ -2,7 +2,7 @@ import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { getProductById } from '../../api/product.js';
 import { useCart } from "../../context/CartContex.jsx";
-
+import { useNavigate } from 'react-router-dom';
 const aromas = [
   { name: 'Lavanda', color: 'bg-purple-200', selectedColor: 'ring-purple-400' },
   { name: 'Rosas', color: 'bg-pink-200', selectedColor: 'ring-pink-400' },
@@ -16,6 +16,8 @@ export const ProductDetail = () => {
   const [product, setProduct] = useState(null);
   const [adding, setAdding] = useState(false);
   const { addToCart } = useCart();
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     getProductById(id)
@@ -82,9 +84,16 @@ export const ProductDetail = () => {
                 type="button"
                 onClick={handleAddToCart}
                 disabled={adding}
-                className="mt-10 flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 px-8 py-3 text-base font-medium text-white hover:bg-indigo-700 focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:outline-hidden"
+                className="mt-10 flex w-full items-center justify-center rounded-md border border-transparent bg-emerald-400 px-8 py-3 text-base font-medium text-white hover:bg-emerald-300 focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:outline-hidden"
               >
                 {adding ? "Agregando..." : "Agregar a la bolsa"}
+              </button>
+              <button
+                type="button"
+                onClick={() => navigate("/shopee")}
+                className="mt-2 flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 px-8 py-3 text-base font-medium text-white hover:bg-indigo-400 focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:outline-hidden"
+              >
+                Volver a la tienda
               </button>
             </div>
           </div>
