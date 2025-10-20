@@ -20,7 +20,7 @@ export const Footer = () => {
                     </div>
                     <p className="mt-3 text-sm text-neutral-700 max-w-sm font-light">Fragancias artesanales para acompañar tus momentos. Calidad, diseño y calidez.</p>
                     <div className="mt-4 flex gap-3">
-                        <a href="#" aria-label="Instagram" className="rounded-full shadow text-emerald-500 p-2 hover:bg-green-200"><Instagram className="h-4 w-4" /></a>
+                        <a href="https://www.instagram.com/lilium.details/" target="_blank" aria-label="Instagram" className="rounded-full shadow text-emerald-500 p-2 hover:bg-green-200"><Instagram className="h-4 w-4" /></a>
                         <a href="#" aria-label="Facebook" className="rounded-full shadow text-emerald-500 p-2 hover:bg-green-200"><Facebook className="h-4 w-4" /></a>
                         <a href="#" aria-label="YouTube" className="rounded-full shadow text-emerald-500 p-2 hover:bg-green-200"><Youtube className="h-4 w-4" /></a>
                     </div>
@@ -28,8 +28,8 @@ export const Footer = () => {
                 <div>
                     <h4 className="font-semibold">Contacto</h4>
                     <ul className="mt-3 space-y-2 text-sm text-neutral-700">
-                        <li className="flex items-center gap-2 font-light"><Mail className="h-4 w-4" /> contacto@lilium.detalles.cl</li>
-                        <li className="flex items-center gap-2 font-light"><Phone className="h-4 w-4" /> +56 9 9999 9999</li>
+                        <li className="flex items-center gap-2 font-light"><Mail className="h-4 w-4" /> lilium.detalles26@gmail.com</li>
+                        <li className="flex items-center gap-2 font-light"><Phone className="h-4 w-4" /> +56 928505781</li>
                         <li className="flex items-center gap-2 font-light"><MapPin className="h-4 w-4" /> Parral, Chile</li>
                     </ul>
                 </div>

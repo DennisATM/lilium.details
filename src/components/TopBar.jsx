@@ -13,8 +13,8 @@ export const TopBar = () => {
                     <span className="text-shadow-xs">Envío gratis por compras sobre $30000</span>
                 </div>
                 <div className="md:flex items-center gap-4 opacity-80">
-                    <div className="flex items-center gap-1"><EnvelopeIcon className="h-4 w-4 text-shadow-xs" /><span className="text-shadow-xs">contacto@lilium.detalles.cl</span></div>
-                    <div className="flex items-center gap-1"><PhoneIcon className="h-4 w-4 text-shadow-xs" /><span className="text-shadow-xs">+56 9 1234 5678</span></div>
+                    <div className="flex items-center gap-1"><EnvelopeIcon className="h-4 w-4 text-shadow-xs" /><span className="text-shadow-xs">lilium.detalles26@gmail.com</span></div>
+                    <div className="flex items-center gap-1"><PhoneIcon className="h-4 w-4 text-shadow-xs" /><span className="text-shadow-xs">+56 928505781</span></div>
                 </div>
             </div>
         </div>
