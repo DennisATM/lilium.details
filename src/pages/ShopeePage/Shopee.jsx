@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { getProducts } from "../../api/product.js";
 import { Link } from "react-router-dom";
+import {useCart} from "../../context/CartContex.jsx";
 
 const categories = [
   { name: 'Velas', href: '#', count: 0 },
@@ -11,11 +12,12 @@ const categories = [
 
 export const Shopee = ()=> {
 
-   const [products, setProducts] = useState([]);
-      
-      useEffect(() => {
+    const [products, setProducts] = useState([]);
+    const {addToCart} = useCart();        
+    
+    useEffect(() => {
           getProducts().then(setProducts).catch(console.error);
-      }, []);
+    }, []);
 
   return (
     // <div className="bg-white">
@@ -65,7 +67,12 @@ export const Shopee = ()=> {
                 </svg>
               </Link>
               <div>
-                <button className="rounded bg-emerald-300 px-2 py-2">Añadir a la bolsa</button>
+                <button type="button"
+                  className="rounded bg-emerald-300 hover:bg-emerald-200 px-2 py-2"
+                 onClick={() => addToCart(product)}
+                >
+                  Añadir a la bolsa
+                </button>
               </div>
             </div>
           ))}
