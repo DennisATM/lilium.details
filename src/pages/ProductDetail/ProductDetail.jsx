@@ -47,11 +47,11 @@ export const ProductDetail = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-10 lg:gap-x-8">
         {/* Image gallery */}
-        <div className="mx-auto mt-2 sm:max-w-sm md:max-w-xl sm:px-2 lg:grid lg:max-w-4xl lg:grid-cols-1 lg:gap-8 lg:px-20">
+        <div className="mx-auto mt-2  md:max-w-xl sm:px-2 lg:grid lg:max-w-4xl lg:grid-cols-1 lg:gap-8 lg:px-20">
           <img
             alt={product.name}
             src={product.imageUrl}
-            className="row-span-1 aspect-5/5 size-140 object-cover sm:rounded-lg lg:aspect-4/4"
+            className="row-span-1 mx-2 aspect-5/5 size-90 md:size-130 object-cover sm:rounded-lg lg:aspect-4/4"
           />
         </div>
 
