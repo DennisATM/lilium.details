@@ -80,16 +80,18 @@ export const Checkout = () => {
     }
   };
 
-  const copyToClipboard = async (text) => {
+  const copyToClipboard = async (text, key) => {
     try {
       await navigator.clipboard.writeText(text);
       setCopied(key);
-      // feedback corto
-      setSuccess({ ...success, copied: true });
-      setTimeout(() => setSuccess((s) => s && { ...s, copied: false }), 900);
-      setTimeout(() => setCopied((cur) => (cur === key ? null : cur)), 1500);
-    } catch {
-      // ignore
+      // limpiar indicador después de corto tiempo
+      setTimeout(() => {
+        setCopied((cur) => (cur === key ? null : cur));
+      }, 1500);
+    } catch (err) {
+      console.error("No se pudo copiar:", err);
+      setError("No se pudo copiar al portapapeles.");
+      setTimeout(() => setError(""), 2000);
     }
   };
 
