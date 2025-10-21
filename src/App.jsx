@@ -12,6 +12,7 @@ import { Login } from './pages/LoginPage/login';
 import { Dashboard } from './pages/dashboardPage/dashboard';
 import { Cart } from "./pages/CartPage/Cart";
 import { FloatButton } from "./components/FloatButton";
+import { Checkout } from "./pages/CheckoutPage/Checkout.jsx";
 
 function App() {
   const [token, setToken] = useState(localStorage.getItem('token'));
@@ -56,6 +57,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/cart" element={<Cart />} />
+          <Route path="/checkout" element={<Checkout />} />
         </Routes>
         <FloatButton />
         <Footer />
