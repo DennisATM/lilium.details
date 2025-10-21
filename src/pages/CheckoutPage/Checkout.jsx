@@ -110,23 +110,23 @@ export const Checkout = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               <div className="bg-gray-100 p-3 rounded">
                 <div className="text-xs text-gray-500">Banco</div>
-                <div className="font-medium">Banco Estado (Cuenta Rut)</div>
+                <div className="font-medium">Banco Estado (Cuenta Cte.)</div>
               </div>
               <div className="bg-gray-100 p-3 rounded flex flex-col">
                 <div className="text-xs text-gray-500">Titular</div>
-                <div className="font-medium">Lilium Detalles SRL</div>
+                <div className="font-medium">Inés Yuquis P.</div>
               </div>
 
               <div className="bg-gray-100 p-3 rounded">
                 <div className="text-xs text-gray-500">RUT</div>
                 <div className="flex items-center justify-between">
-                  <span className="font-mono text-sm">12.345.678-9</span>
+                  <span className="font-mono text-sm">21.828.629-1</span>
                   <div className="flex items-center">
                     {copied === "rut" ? (
                       <span className="text-sm text-emerald-600 font-semibold ml-3">Copiado ✓</span>
                     ) : (
                       <button
-                        onClick={() => copyToClipboard("12.345.678-9", "rut")}
+                        onClick={() => copyToClipboard("21.828.629-1", "rut")}
                         className="ml-3 text-sm text-emerald-600 hover:underline"
                       >
                         Copiar
@@ -137,15 +137,33 @@ export const Checkout = () => {
               </div>
 
               <div className="bg-gray-100 p-3 rounded">
-                <div className="text-xs text-gray-500">Alias</div>
+                <div className="text-xs text-gray-500">Nro. Cuenta</div>
                 <div className="flex items-center justify-between">
-                  <span className="font-mono text-sm">LILIUM.ALIAS</span>
+                  <span className="font-mono text-sm">51700100344</span>
                   <div className="flex items-center">
                     {copied === "alias" ? (
                       <span className="text-sm text-emerald-600 font-semibold ml-3">Copiado ✓</span>
                     ) : (
                       <button
-                        onClick={() => copyToClipboard("LILIUM.ALIAS", "alias")}
+                        onClick={() => copyToClipboard("51700100344", "alias")}
+                        className="ml-3 text-sm text-emerald-600 hover:underline"
+                      >
+                        Copiar
+                      </button>
+                    )}
+                  </div>
+                </div>
+              </div>
+              <div className="bg-gray-100 p-3 rounded">
+                <div className="text-xs text-gray-500">Email</div>
+                <div className="flex items-center justify-between">
+                  <span className="font-mono text-sm">lilium.detalles26@gmail.com</span>
+                  <div className="flex items-center">
+                    {copied === "alias" ? (
+                      <span className="text-sm text-emerald-600 font-semibold ml-3">Copiado ✓</span>
+                    ) : (
+                      <button
+                        onClick={() => copyToClipboard("lilium.detalles26@gmail.com", "alias")}
                         className="ml-3 text-sm text-emerald-600 hover:underline"
                       >
                         Copiar
