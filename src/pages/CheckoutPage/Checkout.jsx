@@ -250,7 +250,7 @@ export const Checkout = () => {
           <h3 className="text-lg font-semibold mb-4">Detalle del pedido</h3>
 
           {(!cart || cart.length === 0) ? (
-            <div className="text-sm text-gray-600">No hay productos en el carrito.</div>
+            <div className="text-sm text-gray-600">No hay productos en la bolsa.</div>
           ) : (
             <div className="space-y-4">
               {cart.map((item) => (
@@ -293,7 +293,7 @@ export const Checkout = () => {
               </div>
 
               <div className="mt-3">
-                <button onClick={() => clearCart()} className="w-full px-3 py-2 bg-red-600 text-white rounded hover:bg-red-700">Vaciar carrito</button>
+                <button onClick={() => clearCart()} className="w-full px-3 py-2 bg-red-600 text-white rounded hover:bg-red-700">Vaciar bolsa</button>
               </div>
             </div>
           )}
