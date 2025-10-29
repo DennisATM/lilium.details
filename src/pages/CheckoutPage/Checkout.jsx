@@ -68,8 +68,8 @@ export const Checkout = () => {
       // limpiar carrito
       clearCart();
       setSuccess({
-        message: "Pedido generado correctamente. Realice la transferencia con los datos indicados.",
         orderId: `ORD-${Date.now()}`,
+        message: `Orden generada correctamente. Realice la transferencia con los datos indicados.`,
       });
       // opcional: navegar a página de confirmación
       // navigate("/order-success");
