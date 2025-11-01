@@ -13,6 +13,7 @@ import { Dashboard } from './pages/dashboardPage/dashboard';
 import { Cart } from "./pages/CartPage/Cart";
 import { FloatButton } from "./components/FloatButton";
 import { Checkout } from "./pages/CheckoutPage/Checkout.jsx";
+import { ProdAdmin } from "./pages/ProdAdmin/ProductAdmin.jsx";
 
 function App() {
   const [token, setToken] = useState(localStorage.getItem('token'));
@@ -58,6 +59,7 @@ function App() {
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/checkout" element={<Checkout />} />
+          <Route path="/admin/products" element={<ProdAdmin />} />
         </Routes>
         <FloatButton />
         <Footer />

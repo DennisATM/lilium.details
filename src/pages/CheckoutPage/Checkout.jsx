@@ -159,11 +159,11 @@ export const Checkout = () => {
                 <div className="flex items-center justify-between">
                   <span className="font-mono text-sm">lilium.detalles26@gmail.com</span>
                   <div className="flex items-center">
-                    {copied === "alias" ? (
+                    {copied === "email" ? (
                       <span className="text-sm text-emerald-600 font-semibold ml-3">Copiado ✓</span>
                     ) : (
                       <button
-                        onClick={() => copyToClipboard("lilium.detalles26@gmail.com", "alias")}
+                        onClick={() => copyToClipboard("lilium.detalles26@gmail.com", "email")}
                         className="ml-3 text-sm text-emerald-600 hover:underline"
                       >
                         Copiar
