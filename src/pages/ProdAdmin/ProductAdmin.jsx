@@ -53,7 +53,7 @@ export const ProdAdmin = () => {
             const formData = new FormData();
             formData.append('image', file);
             
-            const response = await fetch('http://localhost:3000/api/v1/upload', {
+            const response = await fetch('https://lilium-api.onrender.com/api/v1/upload', {
                 method: 'POST',
                 body: formData
             });
@@ -63,7 +63,7 @@ export const ProdAdmin = () => {
             const data = await response.json();
             
             // Construir URLs completas usando la URL base del servidor
-            const imageUrl = `http://localhost:3000/imgProducts/${data.imageUrl}`;
+            const imageUrl = `https://lilium-api.onrender.com/imgProducts/${data.imageUrl}`;
             
             setCurrentProduct(prev => ({
                 ...prev,
