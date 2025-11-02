@@ -36,7 +36,7 @@ export const ProdAdmin = () => {
         }
     };
 
-    const handleImageUpload = async(e) => {
+    const handleImageUpload = async (e) => {
         const file = e.target.files[0];
         if (!file) return;
 
@@ -62,14 +62,12 @@ export const ProdAdmin = () => {
 
             const data = await response.json();
             
-            // Construir URLs completas usando la URL base del servidor
-            const imageUrl = `https://lilium-api.onrender.com/imgProducts/${data.imageUrl}`;
-            
+            // Usar directamente la URL de Cloudinary
             setCurrentProduct(prev => ({
                 ...prev,
-                imageUrl: imageUrl // guardar URL completa
+                imageUrl: data.imageUrl
             }));
-            setImagePreview(imageUrl); // usar la misma URL completa para el preview
+            setImagePreview(data.imageUrl);
             
         } catch (err) {
             console.error(err);
